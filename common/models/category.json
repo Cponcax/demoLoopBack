@@ -1,0 +1,28 @@
+{
+  "name": "category",
+  "plural": "categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "descryption": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "filters": {
+      "type": "hasMany",
+      "model": "filter",
+      "foreignKey": "filterId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,28 @@
+{
+  "name": "banner",
+  "plural": "banners",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "Descryption": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "filter": {
+      "type": "belongsTo",
+      "model": "filter",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

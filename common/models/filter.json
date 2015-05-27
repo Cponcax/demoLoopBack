@@ -1,0 +1,38 @@
+{
+  "name": "filter",
+  "plural": "filters",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "category": {
+      "type": "belongsTo",
+      "model": "category",
+      "foreignKey": ""
+    },
+    "banners": {
+      "type": "hasMany",
+      "model": "banner",
+      "foreignKey": "bannerId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
